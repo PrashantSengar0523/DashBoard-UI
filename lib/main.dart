@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:my_app/dasboard.dart';
+import 'package:my_app/desktop_dasboard.dart';
+import 'package:my_app/mobile_dashboard.dart';
+import 'package:my_app/resposive.dart';
+import 'package:my_app/tablet_dashboard.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +20,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const Dashboard(),
+      home: const ResponsiveLayout(
+        desktop: DesktopDashboard(),
+        tablet: TabletDashboard(),
+        mobile: MobileDashboard(),
+      ),
     );
   }
 }
