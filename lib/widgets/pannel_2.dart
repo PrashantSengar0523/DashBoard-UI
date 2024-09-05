@@ -1,12 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import 'line_chart.dart';
 
-class Pannel_2 extends StatelessWidget {
-  const Pannel_2({
+class Pannel2 extends StatelessWidget {
+  const Pannel2({
     super.key,
   });
 
@@ -21,7 +20,7 @@ class Pannel_2 extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 40, vertical: 16),
+                padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -32,34 +31,28 @@ class Pannel_2 extends StatelessWidget {
                           color: Colors.grey,
                           fontSize: 18),
                     ),
-                    Flexible(
-                      child: Container(
-                        height: 40,
-                        width: 300,
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 48, 30, 51),
-                            borderRadius: BorderRadius.circular(10)),
-                        child: const Padding(
-                            padding: EdgeInsets.only(
-                                top: 4, bottom: 4, left: 16, right: 16),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  "Search",
-                                  style: TextStyle(
-                                      color: Colors.white70, fontSize: 14),
-                                ),
-                                Icon(
-                                  Icons.search_rounded,
-                                  color: Colors.white70,
-                                  size: 21,
-                                )
-                              ],
-                            )),
-                      ),
-                    )
-                  ],
+                   Container(
+          height: 40,
+          width: MediaQuery.of(context).size.width*0.20,
+          decoration: BoxDecoration(
+            color: Colors.grey[100],
+          ),
+          child:  TextField(
+      decoration: InputDecoration(
+        hintText: 'Search...',
+        hintStyle: const TextStyle(
+          color: Colors.white70
+        ),
+        fillColor: const Color.fromARGB(255, 48, 30, 51),
+        filled: true,
+        suffixIcon:  const Icon(Icons.search,color: Colors.white70,),
+        border: OutlineInputBorder(
+          borderSide: BorderSide.none,
+          borderRadius: BorderRadius.circular(12)
+        ),
+        contentPadding: const EdgeInsets.symmetric(vertical: 0,horizontal: 12),
+      )),
+         ),                  ],
                 ),
               ),
               Padding(
@@ -122,7 +115,7 @@ class Pannel_2 extends StatelessWidget {
                               width: 140,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(12),
-                                color: Color.fromARGB(255, 48, 30, 51),
+                                color: const Color.fromARGB(255, 48, 30, 51),
                               ),
                               child: const Center(
                                 child: Text(
@@ -148,10 +141,10 @@ class Pannel_2 extends StatelessWidget {
                       child: Container(
                         height: 215,
                         decoration: BoxDecoration(
-                            color: Color.fromRGBO(0, 7, 45, 1),
+                            color: const Color.fromRGBO(0, 7, 45, 1),
                             borderRadius: BorderRadius.circular(12)),
                         child: Padding(
-                          padding: EdgeInsets.all(10),
+                          padding: const EdgeInsets.all(10),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -409,7 +402,7 @@ class Pannel_2 extends StatelessWidget {
                     Expanded(
                       flex: 1,
                       child: Container(
-                        height: 225,
+                        height: 216,
                         decoration: BoxDecoration(
                           color: const Color.fromRGBO(0, 7, 45, 1),
                           borderRadius: BorderRadius.circular(12),
@@ -417,6 +410,11 @@ class Pannel_2 extends StatelessWidget {
                         child: Column(
                           children: [
                             Container(
+                              padding: const EdgeInsets.only(
+                                  top: 12,
+                                  left: 16,
+                                  right: 16,
+                                ),
                               height: 90,
                               width: double.infinity,
                               decoration: BoxDecoration(
@@ -426,57 +424,49 @@ class Pannel_2 extends StatelessWidget {
                                   topRight: Radius.circular(11),
                                 ),
                               ),
-                              child: const Padding(
-                                padding: EdgeInsets.only(
-                                  top: 16,
-                                  bottom: 6,
-                                  left: 24,
-                                  right: 24,
-                                ),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Top Creators",
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16,
-                                        color: Colors.white,
+                              child: const Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Top Creators",
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 16,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  SizedBox(height: 25),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        "Name",
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white70,
+                                          fontWeight: FontWeight.bold,
+                                        ),
                                       ),
-                                    ),
-                                    SizedBox(height: 25),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Text(
-                                          "Name",
-                                          style: TextStyle(
-                                            fontSize: 12,
-                                            color: Colors.white70,
-                                            fontWeight: FontWeight.bold,
-                                          ),
+                                      Text(
+                                        "Artwork",
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white70,
+                                          fontWeight: FontWeight.bold,
                                         ),
-                                        Text(
-                                          "Artwork",
-                                          style: TextStyle(
-                                            fontSize: 12,
-                                            color: Colors.white70,
-                                            fontWeight: FontWeight.bold,
-                                          ),
+                                      ),
+                                      Text(
+                                        "Rating",
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.white70,
+                                          fontWeight: FontWeight.bold,
                                         ),
-                                        Text(
-                                          "Rating",
-                                          style: TextStyle(
-                                            fontSize: 12,
-                                            color: Colors.white70,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
                               ),
                             ),
                             Padding(
@@ -492,7 +482,7 @@ class Pannel_2 extends StatelessWidget {
                                     children: [
                                       Container(
                                         height: 25,
-                                        width: 25,
+                                        width: MediaQuery.of(context).size.width*0.02,
                                         decoration: const BoxDecoration(
                                           shape: BoxShape.circle,
                                           image: DecorationImage(
@@ -504,22 +494,23 @@ class Pannel_2 extends StatelessWidget {
                                         ),
                                       ),
                                       const SizedBox(width: 10),
-                                      const Expanded(
+                                      Expanded(
                                         child: Text(
                                           "@madrion_021",
                                           style: TextStyle(
-                                            fontSize: 10,
+                                            fontSize: MediaQuery.of(context).size.width*0.007,
                                             fontWeight: FontWeight.bold,
                                             color: Colors.white,
                                           ),
                                         ),
                                       ),
-                                      const Expanded(
+                                      const SizedBox(width: 8,),
+                                      Expanded(
                                         child: Text(
                                           "9281",
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold,
-                                            fontSize: 10,
+                                            fontSize: MediaQuery.of(context).size.width*0.007,
                                             color: Colors.white,
                                           ),
                                         ),
@@ -547,7 +538,7 @@ class Pannel_2 extends StatelessWidget {
                                     children: [
                                       Container(
                                         height: 25,
-                                        width: 25,
+                                        width: MediaQuery.of(context).size.width*0.02,
                                         decoration: const BoxDecoration(
                                           shape: BoxShape.circle,
                                           image: DecorationImage(
@@ -559,22 +550,23 @@ class Pannel_2 extends StatelessWidget {
                                         ),
                                       ),
                                       const SizedBox(width: 10),
-                                      const Expanded(
+                                      Expanded(
                                         child: Text(
                                           "@madrion_021",
                                           style: TextStyle(
-                                            fontSize: 10,
+                                            fontSize: MediaQuery.of(context).size.width*0.007,
                                             fontWeight: FontWeight.bold,
                                             color: Colors.white,
                                           ),
                                         ),
                                       ),
-                                      const Expanded(
+                                      const SizedBox(width: 8,),
+                                      Expanded(
                                         child: Text(
                                           "9281",
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold,
-                                            fontSize: 10,
+                                            fontSize: MediaQuery.of(context).size.width*0.007,
                                             color: Colors.white,
                                           ),
                                         ),
@@ -602,7 +594,7 @@ class Pannel_2 extends StatelessWidget {
                                     children: [
                                       Container(
                                         height: 25,
-                                        width: 25,
+                                        width: MediaQuery.of(context).size.width*0.02,
                                         decoration: const BoxDecoration(
                                           shape: BoxShape.circle,
                                           image: DecorationImage(
@@ -614,22 +606,23 @@ class Pannel_2 extends StatelessWidget {
                                         ),
                                       ),
                                       const SizedBox(width: 10),
-                                      const Expanded(
+                                      Expanded(
                                         child: Text(
                                           "@madrion_021",
                                           style: TextStyle(
-                                            fontSize: 10,
+                                            fontSize: MediaQuery.of(context).size.width*0.007,
                                             fontWeight: FontWeight.bold,
                                             color: Colors.white,
                                           ),
                                         ),
                                       ),
-                                      const Expanded(
+                                      const SizedBox(width: 8,),
+                                      Expanded(
                                         child: Text(
                                           "9281",
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold,
-                                            fontSize: 10,
+                                            fontSize: MediaQuery.of(context).size.width*0.007,
                                             color: Colors.white,
                                           ),
                                         ),
@@ -652,6 +645,7 @@ class Pannel_2 extends StatelessWidget {
                                       ),
                                     ],
                                   ),
+                                  
                                 ],
                               ),
                             ),
@@ -664,7 +658,7 @@ class Pannel_2 extends StatelessWidget {
               ),
               Padding(
                 padding:
-                    EdgeInsets.only(top: 12, right: 24, left: 24, bottom: 12),
+                    const EdgeInsets.only(top: 12, right: 24, left: 24, bottom: 12),
                 child: Container(
                   height: 200,
                   width: double.infinity,

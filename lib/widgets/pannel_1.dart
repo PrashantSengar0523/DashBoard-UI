@@ -1,8 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-class Pannel_1 extends StatelessWidget {
-  const Pannel_1({
+
+class Pannel1 extends StatelessWidget {
+  const Pannel1({
     super.key,
   });
 

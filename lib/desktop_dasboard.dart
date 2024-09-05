@@ -12,16 +12,17 @@ class DesktopDashboard extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // First section
-            Pannel_1(),
+            Pannel1(),
 
             // Second section
-            Pannel_2(),
+            Pannel2(),
 
             // Third section
-            Pannel_3(),
+            Pannel3(),
           ],
         ),
       ),

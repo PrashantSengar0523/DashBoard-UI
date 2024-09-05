@@ -288,13 +288,13 @@ class LineChartSample1State extends State<LineChartSample1> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               const SizedBox(height: 20),
-              const Padding(
-                padding: EdgeInsets.only(left: 16.0),
+              Padding(
+                padding: const EdgeInsets.only(left: 16.0),
                 child: Text(
                   'Over All Performance\n This Years',
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 16,
+                    fontSize: MediaQuery.of(context).size.width>600?17:13,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 1,
                   ),
@@ -311,8 +311,9 @@ class LineChartSample1State extends State<LineChartSample1> {
               const SizedBox(height: 10),
             ],
           ),
+          if(MediaQuery.of(context).size.width>400)
           const Positioned(
-            top: 10,
+            top: 20,
             right: 40,
             child: Row(
               children: [

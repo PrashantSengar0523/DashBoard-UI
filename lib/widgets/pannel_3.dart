@@ -2,8 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class Pannel_3 extends StatelessWidget {
-  const Pannel_3({
+class Pannel3 extends StatelessWidget {
+  const Pannel3({
     super.key,
   });
 
@@ -11,7 +11,7 @@ class Pannel_3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       flex: 1,
-      child: Container(
+      child: SizedBox(
           width: MediaQuery.of(context).size.width / 5,
           child: Column(
             children: [
@@ -61,7 +61,7 @@ class Pannel_3 extends StatelessWidget {
               ),
               Container(
                 width: double.infinity,
-                color: Color.fromRGBO(0, 7, 45, 1),
+                color: const Color.fromRGBO(0, 7, 45, 1),
                 child: Padding(
                   padding: const EdgeInsets.all(16),
                   child: Column(
