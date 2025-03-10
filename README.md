@@ -10,3 +10,6 @@ Just wrapped up a powerful HRM Dashboard built with Flutter! This project simpli
 # Dark Mode & Responsive UI 🌙
 
 ## Tech Stack: Flutter | GetX | Firebase 
+
+# Checkout on my Linkdin
+https://www.linkedin.com/in/prashant-sengar
